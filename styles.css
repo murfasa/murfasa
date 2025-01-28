@@ -1,0 +1,78 @@
+:root {
+  --light-bg: hsl(20, 20%, 80%);
+  --nav-bg: hsla(20, 20%, 80%, 0.6);
+  --accent: red;
+  --light-text: hsl(0, 0%, 0%);
+  --dark-bg: hsl(0, 0%, 20%);
+  --dark-text: hsl(0, 0%, 100%);
+}
+.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+/* Typography */
+/* https://www.cssfontstack.com/Times-New-Roman */
+body { 
+	font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
+}
+
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+  position: sticky;
+  background-color: var(--nav-bg);
+  top: 0;
+  backdrop-filter: blur(3px);
+}
+  nav img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0% 30%;
+    border: 2px var(--dark-bg) solid; 
+  }
+  nav div {
+    display: flex;
+    gap: 4em;
+    align-items: center;
+  }
+  nav .branding {
+    gap: 1em;
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 2em;
+  }
+    nav ul > li {
+      margin: 0;
+    }
+      nav ul > li > a {
+        text-decoration: none;
+        color: var(--light-text);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: center;
+      }
+        nav ul > li > a:hover {
+          /*color: var(--dark-text);*/
+        }
+    nav ul .icon {
+      font-size: 2em;
+    }
