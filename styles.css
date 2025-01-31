@@ -1,78 +1,169 @@
 :root {
-  --light-bg: hsl(20, 20%, 80%);
-  --nav-bg: hsla(20, 20%, 80%, 0.6);
-  --accent: red;
-  --light-text: hsl(0, 0%, 0%);
-  --dark-bg: hsl(0, 0%, 20%);
-  --dark-text: hsl(0, 0%, 100%);
-}
+  --bg: hsl(21, 20%, 80%);
+  --nav-bg: hsla(20, 20%, 80%, 0);
+  --accent: hsl(203, 100%, 50%);
+  --text: hsl(0, 0%, 0%);
+  --hero-bg: url("./images/bloblight.svg");
+
+  --bg-2: hsl(21, 20%, 90%);
+  --bg-3: hsl(21, 20%, 70%);
+
+} 
 .dark {
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
+  --bg: hsl(0, 0%, 20%);
+  --nav-bg: hsla(0, 0%, 20%, 0);
+  --text: hsl(0, 0%, 100%);
+  --hero-bg: url("./images/blobdark.svg");
+
+  --bg-2: hsl(0, 0%, 30%);
+  --bg-3: hsl(0, 0%, 25%);
+
+}
+
+html {
+  background-color: var(--bg);
 }
 
 body {
-  background-color: var(--light-bg);
-  color: var(--light-text);
+	font-family: Garamond,TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; /* https://www.cssfontstack.com/Times-New-Roman */
+  color: var(--text);
+
+  /* https://pocoloco.io/ */
+  background: linear-gradient(90deg, var(--bg), var(--bg-2), var(--bg-3));
+    background-size: 300% 300%;
+    animation: gradient 11s alternate infinite;
 }
 
-/* Typography */
-/* https://www.cssfontstack.com/Times-New-Roman */
-body { 
-	font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
+a {
+  color: inherit;
+}
 
 /* Navigation */
 nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0.5em;
+  padding-left: 4em;
+  padding-right: 4em;
+  background-color: var(--nav-bg);
+/*  backdrop-filter: blur(3px);*/
+}
+
+#navbanner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em;
-  padding-left: 4em;
-  padding-right: 4em;
-  position: sticky;
-  background-color: var(--nav-bg);
-  top: 0;
-  backdrop-filter: blur(3px);
+  padding: 1em;
 }
-  nav img {
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 0% 30%;
-    border: 2px var(--dark-bg) solid; 
+  #navbanner .branding {
+    gap: 0;
+    flex-direction: column;
+    margin: 0;
   }
-  nav div {
+  #navbanner h1 {
+    font-weight: normal;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .3));
+  }
+  #navbanner ul {
+    flex-grow: 1;
+    flex-basis: 0;
     display: flex;
-    gap: 4em;
     align-items: center;
-  }
-  nav .branding {
-    gap: 1em;
-  }
-  nav ul {
-    display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
     gap: 2em;
   }
-    nav ul > li {
-      margin: 0;
+  #navbanner ul:last-of-type {
+    justify-content: end;
+  }
+    #navbanner ul > li {
     }
-      nav ul > li > a {
+      #navbanner ul > li > button {
+        all: unset;
+        cursor: pointer;
+    }
+      #navbanner ul > li > a {
         text-decoration: none;
-        color: var(--light-text);
         display: flex;
         flex-direction: column;
         gap: 0.5em;
         align-items: center;
       }
-        nav ul > li > a:hover {
+        #navbanner ul > li > a:hover {
           /*color: var(--dark-text);*/
         }
-    nav ul .icon {
+    #navbanner ul .icon {
       font-size: 2em;
+      filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, .3));
     }
+#tagline {
+  text-align: center;
+  margin: 0;
+  text-wrap: nowrap;
+}
+#navmenu {
+  margin: 0;
+  padding: 1em;
+  gap: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+main {
+  margin: 0 15em 0 15em;
+  
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  main {
+    margin: 0 5em 0 5em;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  main {
+    margin: 0 2em 0 2em;
+  }
+  #navbanner {
+    flex-direction: column;
+    gap: 0.3em;
+  }
+  #navbanner .branding {
+    order: 1;
+  }
+  #navbanner ul .icon {
+    font-size: 1em;
+  }
+}
