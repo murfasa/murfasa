@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>murfasa.com | aspiring Cloud Solutions Architect</title>
+  <title>murfasa.com | Aspiring Cloud Solutions Architect</title>
   <meta name="description" content="Welcome to my portfolio website. Here you can find information about my projects, skills, and contact details.">
   <meta name="keywords" content="murfasa, murfasa.com, murtaza ali, portfolio, web developer, projects, skills, contact">
   <meta name="author" content="Murtaza Ali">
@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 </head>
 <body>
   <nav>
@@ -22,7 +20,7 @@
         <!--<li><a href="#home">Home</a></li>
         <li><a href="#projects">Resume</a></li>-->
       </ul>
-      <h1 class="branding">murfasa</h1>
+      <h1 class="branding">murfasa<span style="color: var(--accent)">.</span></h1>
       <ul>
         <li><a href="https://www.linkedin.com/in/murfasa/" target="_blank"><ion-icon title="LinkedIn" name="logo-linkedin" class="icon"></ion-icon></a></li>
         <li><a href="https://github.com/murfasa/" target="_blank"><ion-icon title="GitHub" name="logo-github" class="icon"></ion-icon></a></li>
@@ -33,67 +31,57 @@
     </div>
     <div>
       <ul id="navmenu">
-        <li><a>About</a></li>
-        <li><a>Projects</a></li>
-        <li><a>Contact</a></li>
-        <li><a>Resume</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://docs.google.com/document/d/1DmOtYtMghmHFQPKvn0mJwlhHE_PgHeAV01EvEzpiP_k/edit?usp=sharing" target="_blank">Resume</a></li>
       </ul>
     </div>
   </nav>
   <header>
-    <div><h1>Welcome to My Portfolio</h1></div>
+    <div id="heroleft">
+      <h1>Building a <br><i>accessible future</i><br>through technology<span class="accent">.</span></h1>
+
+      <div id="heroquote"><p><span class="accent">"</span>The power of the Web is in its universality. <br> Access by everyone regardless of disability is an essential aspect.<span class="accent">"</span></p>
+      <p style="text-align: right;"><span class="accent">- </span>Tim Berners-Lee <br>W3C Director and inventor of the World Wide Web</p></div>
+    
+    
+    </div>
   </header>
   <main>
-    <section>
-      <h2>About</h2>
-      <p>This is a brief description about the website.</p>
-     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <section id="about">
+      <div>
+        <h2>About</h2>
+        <p>I'm <b>Murtaza Ali</b>, an IT enthusiast who is studying in Information Systems & Tech with a focus on cyber security. I'm passionate about building accessible and inclusive technology solutions that can help make the world a better place, and life easier.</p>
+        <p>With over 6 years of freelance web development, computer building, network administrating, mod development, some CI/CD, and experience using open source tools, I have learned to be <i>practical</i> with how I create.</p>
+        <p>Feel free to explore my portfolio and get in touch with me if you have any questions or would like to collaborate on a project.</p>
+      </div>
+      <div id="aboutimg">
+        <img src="./images/me.webp" alt="Murtaza Ali">
+        <p>📍 <i>Orlando, FL</i></p>
+      </div>
     </section>
-    <section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Here are some things I'm proud of:</p>
+      <ul>
+      <li><b>Tier 1 Hypervisor Home Lab</b> - Two workstation servers running ProxMox for practice and freelance purposes. Experience with managing web servers, IMAP mailboxes, home assistants, and various open-source software on Linux and Windows VMs or Debian LXC containers.</li>
+      <li><a href="https://forum.cfx.re/u/murfasa/summary/">FiveM Mods</a> - Actively developed in the FiveM GTA 5 community and created scripts for server administrators on the FiveM forums. Scripts allowed for the use of different permission systems.</li>
+      <li><a href="https://github.com/murfasa/regexGenerator">Regex Generator</a> - Open-source website created using HTML, CSS, React and OpenAI’s ChatGPT API. Highly rated on Google Pagespeed Insight tests.</li>
+      <li><a href="https://arik.murfasa.com/">Arik's Auto Care</a> - A cool side-project website I made for my old detailer & friend in NYC. The website is a simple one-page design with social media links & a gallery of their work.</li>
+      <li><a href="https://www.sakinabox.com/">Sak-In-A-Box</a> - A website I made for my sister as a birthday present. We try to keep it up to date, but she moves fast.</li>
+</li>
+      </ul>
+    </section>
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Contact us at <a href="mailto:info@example.com">info@example.com</a>.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <p>Here are some of my recent projects:</p>
-      <ul>
-      <li><a href="https://github.com/murfasa/project1">Project 1</a> - A brief description of project 1.</li>
-      <li><a href="https://github.com/murfasa/project2">Project 2</a> - A brief description of project 2.</li>
-      <li><a href="https://github.com/murfasa/project3">Project 3</a> - A brief description of project 3.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <p>Here are some of my recent projects:</p>
-      <ul>
-      <li><a href="https://github.com/murfasa/project1">Project 1</a> - A brief description of project 1.</li>
-      <li><a href="https://github.com/murfasa/project2">Project 2</a> - A brief description of project 2.</li>
-      <li><a href="https://github.com/murfasa/project3">Project 3</a> - A brief description of project 3.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <p>Here are some of my recent projects:</p>
-      <ul>
-      <li><a href="https://github.com/murfasa/project1">Project 1</a> - A brief description of project 1.</li>
-      <li><a href="https://github.com/murfasa/project2">Project 2</a> - A brief description of project 2.</li>
-      <li><a href="https://github.com/murfasa/project3">Project 3</a> - A brief description of project 3.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <p>Here are some of my recent projects:</p>
-      <ul>
-      <li><a href="https://github.com/murfasa/project1">Project 1</a> - A brief description of project 1.</li>
-      <li><a href="https://github.com/murfasa/project2">Project 2</a> - A brief description of project 2.</li>
-      <li><a href="https://github.com/murfasa/project3">Project 3</a> - A brief description of project 3.</li>
-      </ul>
+      <p>Regarding any questions or concerns, shoot me an email at <a href="mailto:contact@murfasa.com">contact@murfasa.com</a>!</p>
     </section>
   </main>
   <footer>
-    <p>View my Resume</p>
+    <p><a href="https://docs.google.com/document/d/1DmOtYtMghmHFQPKvn0mJwlhHE_PgHeAV01EvEzpiP_k/edit?usp=sharing" target="_blank">Resume</a></p>
     <p>&copy; 2017-<script>document.write(new Date().getFullYear())</script> <a href="https://murfasa.com">murfasa.com</a></p>
+    <p style="font-size: 0.3em">Created with HTML, CSS, JS, and ❤️</p>
   </footer>
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

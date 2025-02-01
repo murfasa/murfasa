@@ -1,7 +1,7 @@
 :root {
   --bg: hsl(21, 20%, 80%);
   --nav-bg: hsla(20, 20%, 80%, 0);
-  --accent: hsl(203, 100%, 50%);
+  --accent: hsl(203, 100%, 40%);
   --text: hsl(0, 0%, 0%);
   --hero-bg: url("./images/bloblight.svg");
 
@@ -12,6 +12,7 @@
 .dark {
   --bg: hsl(0, 0%, 20%);
   --nav-bg: hsla(0, 0%, 20%, 0);
+  --accent: hsl(203, 100%, 50%);
   --text: hsl(0, 0%, 100%);
   --hero-bg: url("./images/blobdark.svg");
 
@@ -22,6 +23,8 @@
 
 html {
   background-color: var(--bg);
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navigation-height, 21vh);
 }
 
 body {
@@ -31,7 +34,7 @@ body {
   /* https://pocoloco.io/ */
   background: linear-gradient(90deg, var(--bg), var(--bg-2), var(--bg-3));
     background-size: 300% 300%;
-    animation: gradient 11s alternate infinite;
+    animation: gradient 5s alternate infinite;
 }
 
 @keyframes gradient {
@@ -47,6 +50,22 @@ a {
   color: inherit;
 }
 
+a, p, h1, h2, h3, h4, h5, h6 {
+  text-decoration-color: var(--accent);
+}
+a:hover {
+  color: var(--accent);
+  transition: 0.3s;
+}
+.icon:hover {
+  color: var(--accent);
+  transition: 0.3s;
+}
+
+.accent {
+  color: var(--accent);
+}
+
 /* Navigation */
 nav {
   position: fixed;
@@ -54,12 +73,15 @@ nav {
   left: 0;
   top: 0;
   width: 100%;
-  padding: 0.5em;
+  padding-top: 1em;
   padding-left: 4em;
   padding-right: 4em;
   background-color: var(--nav-bg);
-/*  backdrop-filter: blur(3px);*/
+  backdrop-filter: blur(3px);
 }
+  nav a {
+    text-decoration-color: var(--accent);
+  }
 
 #navbanner {
   display: flex;
@@ -91,22 +113,17 @@ nav {
   #navbanner ul:last-of-type {
     justify-content: end;
   }
-    #navbanner ul > li {
+    #navbanner ul > li > button {
+      all: unset;
+      cursor: pointer;
     }
-      #navbanner ul > li > button {
-        all: unset;
-        cursor: pointer;
+    #navbanner ul > li > a {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      align-items: center;
     }
-      #navbanner ul > li > a {
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        align-items: center;
-      }
-        #navbanner ul > li > a:hover {
-          /*color: var(--dark-text);*/
-        }
     #navbanner ul .icon {
       font-size: 2em;
       filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, .3));
@@ -126,35 +143,110 @@ nav {
   list-style-type: none;
 }
 
-main {
-  margin: 0 15em 0 15em;
-  
-}
-
 header {
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: hsla(0, 0%, 0%, 0.05);
+  border-bottom: var(--bg-3) 1px dashed;
 }
+  header #heroleft {
+    text-align: center;
+  }
+    header #heroleft > h1 {
+      font-size: 3rem;
+      font-weight: normal;
+      filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .3));
+    }
+    header #heroquote {
+      font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      font-style: italic;
+      filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .3));
+      padding-left: 4em;
+      padding-right: 4em;
+    }
+      header #heroquote > p:last-of-type {
+        font-style: normal;
+      }
 
-header h1 {
-  margin: 0;
+main {
+  margin: 2em 15em 2em 15em;
+  margin-top: 2em;
+  margin-left: 15em;
+  margin-right: 15em;
+  letter-spacing: 0.08em;
+  line-height: 1.6em;
 }
+  main p {
+    font-size: 1.1em;
+  }
+  main h2 {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+  }
+  main section {
+    padding-bottom: 1em;
+  }
+  main #about {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+    main #about > #aboutimg{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    main #about > #aboutimg > img{
+      border-radius: 50%;
+      width: 150px;
+      filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .3));
+    }
+  main #contact {
+
+  }
+    main #contact div {
+      text-align: center;
+    }
+    main #contact ion-icon {
+      font-size: 5em;
+    }
+
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--bg-3);
+  letter-spacing: 0.07em;
+}
+  footer p:last-of-type {
+    letter-spacing: 0.2em;
+  }
 
 /* Tablet */
 @media screen and (max-width: 1024px) {
   main {
-    margin: 0 5em 0 5em;
+    margin-left: 5em;
+    margin-right: 5em;
   }
+  header {
+    flex-direction: column;
+    padding-top: var(--navigation-height, 21vh);
+  }
+    header > #heroleft {
+      order: 1;
+    }
 }
 
 /* Mobile */
 @media screen and (max-width: 768px) {
   main {
-    margin: 0 2em 0 2em;
+    margin-left: 2em;
+    margin-right: 2em;
   }
   #navbanner {
     flex-direction: column;
@@ -165,5 +257,17 @@ header h1 {
   }
   #navbanner ul .icon {
     font-size: 1em;
+  }
+  header {
+    justify-content: center;
+  }
+  header > #heroleft > h1 {
+    font-size: 2.5em;
+  }
+  header > #heroleft > #heroquote {
+    font-size: 0.8em;
+  }
+  main #about {
+    flex-direction: column;
   }
 }

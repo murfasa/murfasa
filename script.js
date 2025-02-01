@@ -2,15 +2,18 @@ function setDarkMode() {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   if (prefersDark) {
-    document.body.classList.add("dark");
+    document.documentElement.classList.add("dark");
   } else {
-    document.body.classList.remove("dark");
+    document.documentElement.classList.remove("dark");
   }
 }
 
 function toggleDarkMode() {
-  document.body.classList.toggle("dark");
-  console.log('toggled');
+  document.documentElement.classList.toggle("dark");
+  /*document.body.classList.toggle("dark");*/
 }
+
+const navigationHeight = document.querySelector('nav').offsetHeight + 5;
+document.documentElement.style.setProperty('--navigation-height', `${navigationHeight}px`);
 
 setDarkMode();
