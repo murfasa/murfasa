@@ -257,8 +257,14 @@ footer {
     flex-direction: column;
     gap: 0.3em;
   }
-  #navbanner .branding {
+  #navbanner #menu1 {
     order: 1;
+  }
+  #navbanner #menu2 {
+    order: 2;
+  }
+  #navbanner #brand {
+    order: 3;
   }
   #navbanner ul .icon {
     font-size: 1em;
