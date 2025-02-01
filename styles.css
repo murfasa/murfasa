@@ -222,6 +222,7 @@ footer {
   padding: 1em;
   background-color: var(--bg-3);
   letter-spacing: 0.07em;
+  border-top: var(--bg-3) 1px dashed;
 }
   footer p:last-of-type {
     letter-spacing: 0.2em;
