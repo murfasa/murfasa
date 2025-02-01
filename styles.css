@@ -57,7 +57,7 @@ a:hover {
   color: var(--accent);
   transition: 0.3s;
 }
-.icon:hover {
+#themetoggle:hover {
   color: var(--accent);
   transition: 0.3s;
 }
