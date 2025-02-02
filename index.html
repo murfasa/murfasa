@@ -14,6 +14,7 @@
 </head>
 <body>
   <nav>
+    <div class="loader-wrapper"><div class="loader"></div></div>
     <div id="navbanner">
       <ul id="menu1">
         <li><button onclick="toggleDarkMode()"><ion-icon title="Toggle Light/Dark" name="sunny" class="icon" id="themetoggle"></ion-icon></button></li>
@@ -81,7 +82,7 @@
   </main>
   <footer>
     <p><a href="https://docs.google.com/document/d/1DmOtYtMghmHFQPKvn0mJwlhHE_PgHeAV01EvEzpiP_k/edit?usp=sharing" target="_blank">Resume</a></p>
-    <p>&copy; 2017-<script>document.write(new Date().getFullYear())</script> <a href="https://murfasa.com">murfasa.com</a></p>
+    <p>&copy; 2017-<span id="current-year"></span> <!--<script>document.write(new Date().getFullYear())</script> --><a href="https://murfasa.com">murfasa.com</a></p>
     <p style="font-size: 0.3em">Created with HTML, CSS, JS, and ❤️</p>
   </footer>
   <script src="script.js"></script>
