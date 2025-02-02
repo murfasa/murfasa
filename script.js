@@ -26,7 +26,7 @@ function toggleDarkMode() {
 
 function updateCopyrightYear() {
   const yearSpan = document.getElementById('current-year');
-  yearSpan.textContent = new Date().getFullYear();
+  yearSpan.textContent = "2017 - " + new Date().getFullYear() + " ";
 }
 
 function waitForResources() {
