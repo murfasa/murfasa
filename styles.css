@@ -216,7 +216,7 @@ main {
   margin-top: 2em;
   margin-left: 15em;
   margin-right: 15em;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
   line-height: 1.6em;
 }
   main p {
