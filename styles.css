@@ -8,6 +8,7 @@
   --bg-2: hsl(21, 20%, 90%);
   --bg-3: hsl(21, 20%, 85%);
 
+  --sky-color: hsl(203, 100%, 50%);
 } 
 .dark {
   --bg: hsl(0, 0%, 20%);
@@ -18,7 +19,6 @@
 
   --bg-2: hsl(0, 0%, 30%);
   --bg-3: hsl(0, 0%, 25%);
-
 }
 
 html {
@@ -182,13 +182,14 @@ nav {
 
 /* Header */
 header {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   background-color: hsla(0, 0%, 0%, 0.05);
   border-bottom: var(--bg-2) 2px dashed;
+  color: var(--hero-color);
 }
   header #heroleft {
     text-align: center;
