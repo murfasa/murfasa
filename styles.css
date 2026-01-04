@@ -28,7 +28,8 @@ html {
 }
 
 body {
-	font-family: Garamond,TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; /* https://www.cssfontstack.com/Times-New-Roman */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* https://www.cssfontstack.com/Helvetica */
+	/*font-family: Garamond,TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; *//* https://www.cssfontstack.com/Times-New-Roman */
   color: var(--text);
 
   /* https://pocoloco.io/ */
